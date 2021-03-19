@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477DE2605335E007946D3 /* SearchBar.swift */; };
 		ADD22B982605278400993098 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD22B972605278400993098 /* FeedCell.swift */; };
 		ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF290F72605236C00909CD6 /* InstagramSwiftUIApp.swift */; };
 		ADF290FC2605237000909CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF290FB2605237000909CD6 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADC477DE2605335E007946D3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		ADD22B972605278400993098 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		ADF290F42605236C00909CD6 /* InstagramSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF290F72605236C00909CD6 /* InstagramSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF29117260524D400909CD6 /* SearchView.swift */,
+				ADC477DE2605335E007946D3 /* SearchBar.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */,
 				ADF2911B260524DA00909CD6 /* UploadView.swift in Sources */,
 				ADF29121260524ED00909CD6 /* ProfileView.swift in Sources */,
+				ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */,
 				ADF2911E260524E500909CD6 /* NotificationView.swift in Sources */,
 				ADD22B982605278400993098 /* FeedCell.swift in Sources */,
 			);

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 32) {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(spacing: 0) {
                 ForEach(0 ..< 10) { _ in
                     FeedCell()
                         .padding([.top, .bottom])
