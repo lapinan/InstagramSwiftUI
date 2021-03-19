@@ -28,11 +28,10 @@ struct SearchBar: View {
                     isSearchText = true
                 }
             
-            
-            
             if isSearchText {
                 Button(action: {
-                    
+                    isSearchText = false
+                    searchText = ""
                 }) {
                     Text("Cancel")
                         .foregroundColor(Color.black)

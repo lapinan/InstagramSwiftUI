@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD68ECD8260557AE00EB6A19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68ECD7260557AE00EB6A19 /* Extensions.swift */; };
 		ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477DE2605335E007946D3 /* SearchBar.swift */; };
 		ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E226054EC4007946D3 /* PostGridView.swift */; };
 		ADC477E6260551FF007946D3 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E5260551FF007946D3 /* UserListView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD68ECD7260557AE00EB6A19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ADC477DE2605335E007946D3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		ADC477E226054EC4007946D3 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		ADC477E5260551FF007946D3 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		ADF2910B260523EF00909CD6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD68ECD7260557AE00EB6A19 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */,
 				ADF2911E260524E500909CD6 /* NotificationView.swift in Sources */,
 				ADD22B982605278400993098 /* FeedCell.swift in Sources */,
+				AD68ECD8260557AE00EB6A19 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
