@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477DE2605335E007946D3 /* SearchBar.swift */; };
+		ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E226054EC4007946D3 /* PostGridView.swift */; };
 		ADD22B982605278400993098 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD22B972605278400993098 /* FeedCell.swift */; };
 		ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF290F72605236C00909CD6 /* InstagramSwiftUIApp.swift */; };
 		ADF290FC2605237000909CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF290FB2605237000909CD6 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		ADC477DE2605335E007946D3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		ADC477E226054EC4007946D3 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		ADD22B972605278400993098 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		ADF290F42605236C00909CD6 /* InstagramSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF290F72605236C00909CD6 /* InstagramSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		ADF29116260524A000909CD6 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				ADC477E226054EC4007946D3 /* PostGridView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				ADF291142605249800909CD6 /* FeedView.swift in Sources */,
 				ADF29118260524D400909CD6 /* SearchView.swift in Sources */,
+				ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */,
 				ADF291282605257A00909CD6 /* ContentView.swift in Sources */,
 				ADF2912B2605259600909CD6 /* MainTabView.swift in Sources */,
 				ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */,

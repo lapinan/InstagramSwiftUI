@@ -11,9 +11,11 @@ struct SearchView: View {
     @State private var searchText = ""
     
     var body: some View {
-        HStack {
+        ScrollView {
             SearchBar(searchText: $searchText)
                 .padding()
+            
+            PostGridView()
         }
     }
 }

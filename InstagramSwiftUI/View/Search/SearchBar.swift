@@ -24,6 +24,8 @@ struct SearchBar: View {
                 )
             
             Spacer()
+            
+            // post gird item
         }
     }
 }
