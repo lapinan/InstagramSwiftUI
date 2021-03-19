@@ -9,9 +9,10 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var searchText: String
+    @Binding var isSearchText: Bool
     
     var body: some View {
-        VStack {
+        HStack {
             TextField("Search...", text: $searchText)
                 .padding(8)
                 .padding(.horizontal, 30)
@@ -21,17 +22,31 @@ struct SearchBar: View {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(Color.gray)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading)
                 )
+                .onTapGesture {
+                    isSearchText = true
+                }
             
-            Spacer()
             
-            // post gird item
+            
+            if isSearchText {
+                Button(action: {
+                    
+                }) {
+                    Text("Cancel")
+                        .foregroundColor(Color.black)
+                }
+                .padding(.trailing)
+                .transition(.move(edge: .trailing))
+                .animation(.default)
+            }
         }
     }
 }
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchText: .constant("search"))
+        SearchBar(searchText: .constant("search"), isSearchText:  .constant(false))
     }
 }

@@ -59,7 +59,7 @@ struct FeedCell: View {
                 Text("batman").font(.system(size: 14, weight: .semibold)) + Text(" All men have limits. The learn whate they are and learn not to exced them. I ignore mine.").font(.system(size: 15))
             }
             .foregroundColor(Color.black)
-            .padding(.leading)
+            .padding([.leading, .trailing])
             .padding(.top, 2)
             
             Text("2d")
