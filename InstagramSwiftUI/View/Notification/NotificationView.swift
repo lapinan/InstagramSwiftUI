@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct NotificationView: View {
+    
+    private let array = [true, false, true, false, true, false, true, false, true, false]
+    
     var body: some View {
-        Text("Notification")
+        ScrollView {
+            LazyVStack(spacing: 16) {
+                ForEach(0 ..< 10) { item in
+                    NotificationCell(showPostImage: array[item])
+                        .padding(.top)
+                }
+            }
+        }
     }
 }
 

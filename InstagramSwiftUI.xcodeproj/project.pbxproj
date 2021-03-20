@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD1211C62605D04700D5B201 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211C52605D04700D5B201 /* ImagePicker.swift */; };
+		AD1211C92605D49200D5B201 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211C82605D49200D5B201 /* NotificationCell.swift */; };
+		AD1211CC2605D69F00D5B201 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211CB2605D69F00D5B201 /* ProfileHeaderView.swift */; };
+		AD1211CF2605D78D00D5B201 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211CE2605D78D00D5B201 /* UserStatView.swift */; };
+		AD1211D22605DA3F00D5B201 /* ActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211D12605DA3F00D5B201 /* ActionButtonsView.swift */; };
 		AD68ECD8260557AE00EB6A19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68ECD7260557AE00EB6A19 /* Extensions.swift */; };
 		ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477DE2605335E007946D3 /* SearchBar.swift */; };
 		ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E226054EC4007946D3 /* PostGridView.swift */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		AD1211C52605D04700D5B201 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AD1211C82605D49200D5B201 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		AD1211CB2605D69F00D5B201 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		AD1211CE2605D78D00D5B201 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		AD1211D12605DA3F00D5B201 /* ActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsView.swift; sourceTree = "<group>"; };
 		AD68ECD7260557AE00EB6A19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ADC477DE2605335E007946D3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		ADC477E226054EC4007946D3 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -147,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				ADF29120260524ED00909CD6 /* ProfileView.swift */,
+				AD1211CB2605D69F00D5B201 /* ProfileHeaderView.swift */,
+				AD1211CE2605D78D00D5B201 /* UserStatView.swift */,
+				AD1211D12605DA3F00D5B201 /* ActionButtonsView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF2911D260524E500909CD6 /* NotificationView.swift */,
+				AD1211C82605D49200D5B201 /* NotificationCell.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -277,16 +289,20 @@
 				ADC477E926055227007946D3 /* UserCell.swift in Sources */,
 				ADF29118260524D400909CD6 /* SearchView.swift in Sources */,
 				ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */,
+				AD1211CC2605D69F00D5B201 /* ProfileHeaderView.swift in Sources */,
 				ADF291282605257A00909CD6 /* ContentView.swift in Sources */,
 				ADF2912B2605259600909CD6 /* MainTabView.swift in Sources */,
 				ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */,
 				ADF2911B260524DA00909CD6 /* UploadView.swift in Sources */,
+				AD1211C92605D49200D5B201 /* NotificationCell.swift in Sources */,
 				ADC477E6260551FF007946D3 /* UserListView.swift in Sources */,
+				AD1211CF2605D78D00D5B201 /* UserStatView.swift in Sources */,
 				ADF29121260524ED00909CD6 /* ProfileView.swift in Sources */,
 				ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */,
 				ADF2911E260524E500909CD6 /* NotificationView.swift in Sources */,
 				AD1211C62605D04700D5B201 /* ImagePicker.swift in Sources */,
 				ADD22B982605278400993098 /* FeedCell.swift in Sources */,
+				AD1211D22605DA3F00D5B201 /* ActionButtonsView.swift in Sources */,
 				AD68ECD8260557AE00EB6A19 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
