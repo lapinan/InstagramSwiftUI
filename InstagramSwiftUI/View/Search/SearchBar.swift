@@ -32,13 +32,14 @@ struct SearchBar: View {
                 Button(action: {
                     isSearchText = false
                     searchText = ""
+                    UIApplication.shared.endEditing()
                 }) {
                     Text("Cancel")
                         .foregroundColor(Color.black)
                 }
                 .padding(.trailing)
                 .transition(.move(edge: .trailing))
-                .animation(.default)
+                .animation(.easeIn(duration: 0.1))
             }
         }
     }
