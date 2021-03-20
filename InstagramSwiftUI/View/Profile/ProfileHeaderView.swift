@@ -30,13 +30,14 @@ struct ProfileHeaderView: View {
                     
                     UserStatView()
                 }
-            }
+            }.padding(.horizontal)
             
             Text("Bruce Wayne")
                 .font(.system(size: 15, weight: .semibold))
-                .padding([.top, .bottom])
+                .padding([.top, .bottom, .leading, .trailing])
             Text("Gotham's Dark Knight || Billionare")
                 .font(.system(size: 15))
+                .padding([.leading, .trailing])
             
             ActionButtonsView(isCurrentPage: false, isFollowed: false)
                 .padding([.top, .bottom])
