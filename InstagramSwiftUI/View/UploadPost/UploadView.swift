@@ -11,6 +11,7 @@ struct UploadView: View {
     @State private var selectedImage: UIImage?
     @State private var postImage: Image? 
     @State private var captionText = ""
+    @State private var showingImagePicker = false
     
     private let width = UIScreen.main.bounds.width * 0.3
     
@@ -18,13 +19,17 @@ struct UploadView: View {
         VStack(spacing: 60) {
             if postImage == nil {
                 Button(action: {
-                    
+                    showingImagePicker.toggle()
                 }) {
                     Image("plusButton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: width, height: width)
-                }.padding(.top, 50)
+                }
+                .padding(.top, 50)
+                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                    ImagePicker(image: $selectedImage)
+                }
             } else if let image = postImage {
                 HStack(alignment: .top) {
                     image
@@ -51,6 +56,14 @@ struct UploadView: View {
             Spacer()
         }
         .padding()
+    }
+}
+
+
+extension UploadView {
+    func loadImage() {
+        guard let image = selectedImage else { return }
+        postImage = Image(uiImage: image)
     }
 }
 
