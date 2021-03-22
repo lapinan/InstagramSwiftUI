@@ -28,7 +28,7 @@ struct MainTabView: View {
             }.accentColor(.black)
             .navigationTitle(Text("Home"))
             .navigationBarItems(leading: Button(action: {
-                AuthViewModel.shared.logout()
+                AuthViewModel.shared.signout()
             }, label: {
                 Text("Logout").foregroundColor(Color.black)
             }))

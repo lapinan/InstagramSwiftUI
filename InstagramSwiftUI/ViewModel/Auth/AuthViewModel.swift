@@ -33,7 +33,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func logout() {
+    func signout() {
         self.userSession = nil
         try? Auth.auth().signOut()
     }
