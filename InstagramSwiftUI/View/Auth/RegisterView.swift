@@ -20,6 +20,8 @@ struct RegisterView: View {
     
     @Environment(\.presentationMode) var mode
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .top, endPoint: .bottom)
@@ -54,18 +56,21 @@ struct RegisterView: View {
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
+                        .foregroundColor(Color.white)
                     
                     CustomTextField(text: $userName, placeholder: Text("Username"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
+                        .foregroundColor(Color.white)
 
-                    CustomTextField(text: $email, placeholder: Text("Full Name"), imageName: "person")
+                    CustomTextField(text: $fullName, placeholder: Text("Full Name"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
+                        .foregroundColor(Color.white)
 
                     
                     CustomSecureField(text: $password)
@@ -73,11 +78,12 @@ struct RegisterView: View {
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
+                        .foregroundColor(Color.white)
             
                 }.padding(.bottom)
                 
                 Button(action: {
-                    
+                    viewModel.register(withEmail: email, password: password)
                 }, label: {
                     Text("Sign Up")
                         .font(.headline)

@@ -17,9 +17,7 @@ struct InstagramSwiftUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            MainTabView()
-            
-            LoginView()
+            ContentView().environmentObject(AuthViewModel())
         }
     }
 }
