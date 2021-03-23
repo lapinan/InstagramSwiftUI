@@ -17,8 +17,17 @@ class AuthViewModel: ObservableObject {
         userSession = Auth.auth().currentUser
     }
     
-    func login() {
-        print("login")
+    func login(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { resutl, error in
+            if let error = error {
+                print("DEBUG: Login failed \(error.localizedDescription)")
+                return
+            }
+            
+            guard let user = resutl?.user else { return }
+            self.userSession = user
+            print("Successfully login user ")
+        }
     }
     
     func register(withEmail email: String, password: String, image: UIImage?, username: String, fullname: String) {
