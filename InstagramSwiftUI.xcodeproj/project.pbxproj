@@ -27,6 +27,7 @@
 		ADB2B30F26090A22001592CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB2B30E26090A22001592CE /* GoogleService-Info.plist */; };
 		ADB2B31326090E18001592CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ADB2B31226090E18001592CE /* Kingfisher */; };
 		ADB2B31726090F0C001592CE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB2B31626090F0C001592CE /* AuthViewModel.swift */; };
+		ADB2B31A260939EE001592CE /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB2B319260939EE001592CE /* ImageUploader.swift */; };
 		ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477DE2605335E007946D3 /* SearchBar.swift */; };
 		ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E226054EC4007946D3 /* PostGridView.swift */; };
 		ADC477E6260551FF007946D3 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC477E5260551FF007946D3 /* UserListView.swift */; };
@@ -58,6 +59,7 @@
 		ADA9A3FF26064793000AE0D5 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		ADB2B30E26090A22001592CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADB2B31626090F0C001592CE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		ADB2B319260939EE001592CE /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		ADC477DE2605335E007946D3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		ADC477E226054EC4007946D3 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		ADC477E5260551FF007946D3 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		ADF2910C260523F300909CD6 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				ADB2B319260939EE001592CE /* ImageUploader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				ADF29118260524D400909CD6 /* SearchView.swift in Sources */,
 				ADA9A3F726063ABA000AE0D5 /* RegisterView.swift in Sources */,
 				ADA9A3FD26063CB1000AE0D5 /* CustomTextField.swift in Sources */,
+				ADB2B31A260939EE001592CE /* ImageUploader.swift in Sources */,
 				ADC477E326054EC4007946D3 /* PostGridView.swift in Sources */,
 				AD1211CC2605D69F00D5B201 /* ProfileHeaderView.swift in Sources */,
 				ADF291282605257A00909CD6 /* ContentView.swift in Sources */,

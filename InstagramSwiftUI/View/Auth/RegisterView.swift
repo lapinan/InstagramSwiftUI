@@ -44,7 +44,7 @@ struct RegisterView: View {
                 } else if let image = postImage {
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.width * 0.3)
                         .padding(.bottom)
                         .clipShape(Circle())
@@ -83,7 +83,7 @@ struct RegisterView: View {
                 }.padding(.bottom)
                 
                 Button(action: {
-                    viewModel.register(withEmail: email, password: password)
+                    viewModel.register(withEmail: email, password: password, image: selectedImage, username: userName, fullname: fullName)
                 }, label: {
                     Text("Sign Up")
                         .font(.headline)
