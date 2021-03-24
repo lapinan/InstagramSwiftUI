@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct UserCell: View {
+    
+    let username: String
+    let fullname: String
+    
     var body: some View {
         HStack {
             Image("joker")
@@ -17,21 +21,15 @@ struct UserCell: View {
                 .clipShape(Circle())
             
             VStack(alignment: .leading) {
-                Text("batman")
+                Text(username)
                     .font(.system(size: 14, weight: .semibold))
                 
-                Text("Bruce Wayne")
+                Text(fullname)
                     .font(.system(size: 14))
             }
             
             Spacer()
         }
         .padding(.leading)
-    }
-}
-
-struct UserCell_Previews: PreviewProvider {
-    static var previews: some View {
-        UserCell()
     }
 }

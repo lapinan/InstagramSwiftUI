@@ -11,6 +11,8 @@ struct SearchView: View {
     @State private var searchText = ""
     @State private var isSearchText = false
     
+    @ObservedObject var viewModel = SearchViewModel()
+    
     var body: some View {
         ScrollView {
             
@@ -18,7 +20,7 @@ struct SearchView: View {
                 .padding()
             
             if isSearchText {
-               UserListView()
+               UserListView(viewModel: viewModel)
             } else {
                 PostGridView()
             }

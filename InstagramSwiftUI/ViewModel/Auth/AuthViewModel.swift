@@ -15,6 +15,7 @@ class AuthViewModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func login(email: String, password: String) {
@@ -26,7 +27,7 @@ class AuthViewModel: ObservableObject {
             
             guard let user = resutl?.user else { return }
             self.userSession = user
-            print("Successfully login user ")
+            print("DEBUG: Successfully login user ")
         }
     }
     
@@ -42,7 +43,7 @@ class AuthViewModel: ObservableObject {
                 }
                 
                 guard let user = result?.user else { return }
-                print("good register user")
+                
                 
                 let data = ["email": email,
                             "username": username,
@@ -53,6 +54,7 @@ class AuthViewModel: ObservableObject {
                 
                 COLLECTION_USERS.document(user.uid).setData( data) { _ in
                     self.userSession = user
+                    print("DEBUG: Successefully register user")
                 }
             }
         }
@@ -64,9 +66,10 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() {
-        guard let uid = userSession?.uid else  { return }
+        guard let uid = userSession?.uid else { return }
         COLLECTION_USERS.document(uid).getDocument { snapShot, _ in
-            print(snapShot?.data())
+            guard let user = try? snapShot?.data(as: User.self) else { return }
+            print("DEBUG: User is \(user)")
         }
     }
     
