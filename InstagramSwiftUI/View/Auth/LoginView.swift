@@ -18,6 +18,9 @@ struct LoginView: View {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
+                    .onTapGesture {
+                        UIApplication.shared.endEditing()
+                    }
                 VStack(alignment: .center) {
                     Image("instagram")
                         .resizable()

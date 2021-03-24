@@ -26,6 +26,9 @@ struct RegisterView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
             VStack(alignment: .center) {
                 if postImage == nil {
                     Button(action: {

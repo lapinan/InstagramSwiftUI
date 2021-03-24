@@ -52,7 +52,7 @@ struct FeedCell: View {
                 }
             }
             .foregroundColor(Color.black)
-            .padding([.leading, .top])
+            .padding([.leading])
             
             // cpation
             HStack {
