@@ -37,8 +37,8 @@ struct RegisterView: View {
                         Image("plusButton")
                             .renderingMode(.template)
                             .resizable()
-                            .scaledToFill()
-                            .frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.width * 0.3)
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.width * 0.3)
                             .padding(.bottom)
                             .foregroundColor(.white)
                     }).sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
@@ -47,8 +47,8 @@ struct RegisterView: View {
                 } else if let image = postImage {
                     image
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.width * 0.3)
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width * 0.3)
                         .padding(.bottom)
                         .clipShape(Circle())
                 }

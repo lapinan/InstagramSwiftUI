@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct UserListView: View {
-    
+    @Binding var searchText: String
     @ObservedObject var viewModel: SearchViewModel
+    
+    var users: [User] {
+        return searchText.isEmpty ? viewModel.users : viewModel.filteredUsers(searchText)
+    }
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 15) {
-                ForEach(viewModel.users) { user in
+                ForEach(users) { user in
                     NavigationLink(destination: ProfileView()) {
-                        UserCell(username: user.username, fullname: user.fullname)
+                        UserCell(user: user)
                             .padding(.top, 4)
                     }
                 }

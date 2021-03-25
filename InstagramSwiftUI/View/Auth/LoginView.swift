@@ -25,8 +25,11 @@ struct LoginView: View {
                     Image("instagram")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width * 0.8, height: 70)
+                        .frame(width: UIScreen.main.bounds.width * 0.5)
                         .padding(.bottom)
+                        .onTapGesture {
+                            UIApplication.shared.endEditing()
+                        }
                     
                     VStack(spacing: 20) {
                         CustomTextField(text: $emailText, placeholder: Text("Email"), imageName: "envelope")

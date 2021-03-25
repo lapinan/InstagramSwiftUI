@@ -16,11 +16,16 @@ class SearchViewModel: ObservableObject {
     }
     
     func fetchUsers() {
-        print("DEBUG: getFetch users")
+        print("DEBUG: Fetch all users")
         COLLECTION_USERS.getDocuments { snapshots, _ in
             guard let documents = snapshots?.documents else { return }
             self.users = documents.compactMap { try? $0.data(as: User.self) }
-            print(self.users)
+            print(self.users )
         }
+    }
+    
+    func filteredUsers(_ query: String) -> [User] {
+        let querylowercased = query.lowercased()
+        return self.users.filter { $0.fullname.lowercased().contains(querylowercased) || $0.username.lowercased().contains(querylowercased) }
     }
 }

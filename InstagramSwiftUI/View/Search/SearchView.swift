@@ -20,7 +20,7 @@ struct SearchView: View {
                 .padding()
             
             if isSearchText {
-               UserListView(viewModel: viewModel)
+                UserListView(searchText: $searchText, viewModel: viewModel)
             } else {
                 PostGridView()
             }

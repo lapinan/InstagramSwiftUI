@@ -21,6 +21,7 @@ struct ImageUploader {
             
             ref.downloadURL { url, _ in
                 guard let imageURL = url?.absoluteString else { return }
+                print("DEBUG: Successefully upload image for register user")
                 completion(imageURL)
             }
         }
