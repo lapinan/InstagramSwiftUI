@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let user: User
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -23,8 +25,8 @@ struct MainTabView: View {
                 NotificationView()
                     .tabItem { Image(systemName: "heart") }
                 
-//                ProfileView(user: AuthViewModel.shared.fetchUser())
-//                    .tabItem { Image(systemName: "person") }
+                ProfileView(user: user)
+                    .tabItem { Image(systemName: "person") }
             }.accentColor(.black)
             .navigationTitle(Text("Home"))
             .navigationBarItems(leading: Button(action: {
