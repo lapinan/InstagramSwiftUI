@@ -23,8 +23,8 @@ struct MainTabView: View {
                 NotificationView()
                     .tabItem { Image(systemName: "heart") }
                 
-                ProfileView()
-                    .tabItem { Image(systemName: "person") }
+//                ProfileView(user: AuthViewModel.shared.fetchUser())
+//                    .tabItem { Image(systemName: "person") }
             }.accentColor(.black)
             .navigationTitle(Text("Home"))
             .navigationBarItems(leading: Button(action: {

@@ -38,8 +38,6 @@ struct SearchBar: View {
                         .foregroundColor(Color.black)
                 }
                 .padding(.trailing)
-                .transition(.move(edge: .trailing))
-                .animation(.easeIn(duration: 0.1))
             }
         }
     }

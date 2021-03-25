@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActionButtonsView: View {
-    var isCurrentPage = true
+    var isCurrentPage: Bool
     var isFollowed = true
     
     private let width = UIScreen.main.bounds.width
@@ -69,8 +69,4 @@ struct ActionButtonsView: View {
     }
 }
 
-struct ActionButtonsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActionButtonsView()
-    }
-}
+
