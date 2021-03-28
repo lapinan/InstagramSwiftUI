@@ -29,6 +29,7 @@ class AuthViewModel: ObservableObject {
             guard let user = resutl?.user else { return }
             self.userSession = user
             print("DEBUG: Successfully login user ")
+            self.fetchUser()
         }
     }
     
@@ -56,6 +57,7 @@ class AuthViewModel: ObservableObject {
                 COLLECTION_USERS.document(user.uid).setData( data) { _ in
                     self.userSession = user
                     print("DEBUG: Successefully register user")
+                    self.fetchUser()
                 }
             }
         }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ActionButtonsView: View {
-    var isCurrentPage: Bool
+    @ObservedObject var viewModel: ProfileViewModel
     var isFollowed = true
     
     private let width = UIScreen.main.bounds.width
     
     var body: some View {
-        if isCurrentPage {
+        if viewModel.user.isCurrentPage {
             HStack {
                 Spacer()
                 
@@ -38,7 +38,7 @@ struct ActionButtonsView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    isFollowed ? viewModel.unfollow() : viewModel.follow()
                 }) {
                     Text(isFollowed ? "Following" : "Follow")
                         .font(.system(size: 14, weight: .semibold))
