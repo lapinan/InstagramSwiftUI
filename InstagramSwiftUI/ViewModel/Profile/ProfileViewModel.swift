@@ -24,6 +24,10 @@ class ProfileViewModel: ObservableObject {
     }
     
     func unfollow() {
-        print("DEBUG: Unfollow")
+        guard let uid = user.id else { return }
+        UserService.unfollow(uid: uid) { _ in
+            print("DEBUG: Unfollow user is \(self.user.username)")
+            self.user.isFollowed = false
+        }
     }
 }
