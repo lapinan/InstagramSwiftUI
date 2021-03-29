@@ -14,6 +14,7 @@
 		AD1211D22605DA3F00D5B201 /* ActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1211D12605DA3F00D5B201 /* ActionButtonsView.swift */; };
 		AD505472260D132C00EDA5DA /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD505471260D132C00EDA5DA /* ProfileViewModel.swift */; };
 		AD68ECD8260557AE00EB6A19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68ECD7260557AE00EB6A19 /* Extensions.swift */; };
+		AD97AF332610604D0007CF9C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97AF322610604D0007CF9C /* UserService.swift */; };
 		ADA9A3F326063AB2000AE0D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3F226063AB2000AE0D5 /* LoginView.swift */; };
 		ADA9A3F726063ABA000AE0D5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3F626063ABA000AE0D5 /* RegisterView.swift */; };
 		ADA9A3FA26063AC9000AE0D5 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3F926063AC9000AE0D5 /* ForgotPasswordView.swift */; };
@@ -59,6 +60,7 @@
 		AD1211D12605DA3F00D5B201 /* ActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsView.swift; sourceTree = "<group>"; };
 		AD505471260D132C00EDA5DA /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AD68ECD7260557AE00EB6A19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD97AF322610604D0007CF9C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		ADA9A3F226063AB2000AE0D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ADA9A3F626063ABA000AE0D5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		ADA9A3F926063AC9000AE0D5 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB2B319260939EE001592CE /* ImageUploader.swift */,
+				AD97AF322610604D0007CF9C /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				ADF290F82605236C00909CD6 /* InstagramSwiftUIApp.swift in Sources */,
 				ADF2911B260524DA00909CD6 /* UploadView.swift in Sources */,
 				AD1211C92605D49200D5B201 /* NotificationCell.swift in Sources */,
+				AD97AF332610604D0007CF9C /* UserService.swift in Sources */,
 				ADC477E6260551FF007946D3 /* UserListView.swift in Sources */,
 				ADA9A3FA26063AC9000AE0D5 /* ForgotPasswordView.swift in Sources */,
 				AD1211CF2605D78D00D5B201 /* UserStatView.swift in Sources */,

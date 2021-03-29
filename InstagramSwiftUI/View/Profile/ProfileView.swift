@@ -18,7 +18,7 @@ struct ProfileView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
+            VStack { 
                 ProfileHeaderView(viewModel: viewModel)
                     .padding(.top)
                 
