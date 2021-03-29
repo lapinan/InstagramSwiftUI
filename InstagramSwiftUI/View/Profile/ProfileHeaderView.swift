@@ -43,7 +43,7 @@ struct ProfileHeaderView: View {
                 .font(.system(size: 15))
                 .padding([.leading, .trailing])
             
-            ActionButtonsView(viewModel: viewModel, isFollowed: false)
+            ActionButtonsView(viewModel: viewModel)
                 .padding([.top, .bottom])
         }
     }

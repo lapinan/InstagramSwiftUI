@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActionButtonsView: View {
     @ObservedObject var viewModel: ProfileViewModel
-    var isFollowed = true
+    var isFollowed: Bool { return viewModel.user.isFollowed ?? false }
     
     private let width = UIScreen.main.bounds.width
     
