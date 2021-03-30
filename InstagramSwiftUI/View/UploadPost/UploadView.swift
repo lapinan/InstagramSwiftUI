@@ -33,33 +33,59 @@ struct UploadView: View {
                     ImagePicker(image: $selectedImage)
                 }
             } else if let image = postImage {
-                HStack(alignment: .top) {
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: width, height: width)
-                        .clipped()
-                    
-                    TextArea(text: $captionText, placeholder: "Enter your captions...")
-                        .frame(height: UIScreen.main.bounds.height / 2)
+                
+                VStack {
+                    HStack(alignment: .top) {
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: width, height: width)
+                            .clipped()
+                        
+                        TextArea(text: $captionText, placeholder: "Enter your captions...")
+                            .frame(height: UIScreen.main.bounds.height / 4)
 
-                }.padding(.horizontal)
-                Button(action: {
-                    if let image = selectedImage {
-                        viewModel.uploadPost(caption: captionText, image: image) { _ in
+                    }.padding(.horizontal)
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button(action: {
                             captionText = ""
                             postImage = nil
-                            tabIndex = 0
+                        }) {
+                            Text("Cancel")
+                                .frame(width: UIScreen.main.bounds.width / 2 - 40, height: 50)
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(Color.white)
+                                .background(Color.red)
+                                .cornerRadius(10)
                         }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            if let image = selectedImage {
+                                viewModel.uploadPost(caption: captionText, image: image) { _ in
+                                    captionText = ""
+                                    postImage = nil
+                                    tabIndex = 0
+                                }
+                            }
+                        }) {
+                            Text("Share")
+                                .frame(width: UIScreen.main.bounds.width / 2 - 40, height: 50)
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(Color.white)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                        
+                        Spacer()
+
                     }
-                }) {
-                    Text("Share")
-                        .frame(width: UIScreen.main.bounds.width - 40, height: 50)
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
                 }
+                
             }
             
             Spacer()
