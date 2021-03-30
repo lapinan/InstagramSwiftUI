@@ -12,6 +12,7 @@ struct UploadView: View {
     @State private var postImage: Image? 
     @State private var captionText = ""
     @State private var showingImagePicker = false
+    @ObservedObject var viewModel = UploadViewModel()
     
     private let width = UIScreen.main.bounds.width * 0.3
     
@@ -42,7 +43,12 @@ struct UploadView: View {
                         .padding(.top)
                 }.padding(.horizontal)
                 Button(action: {
-                    
+                    if let image = selectedImage {
+                        viewModel.uploadPost(caption: captionText, image: image) { _ in
+                            captionText = ""
+                            postImage = nil
+                        }
+                    }
                 }) {
                     Text("Share")
                         .frame(width: UIScreen.main.bounds.width - 40, height: 50)

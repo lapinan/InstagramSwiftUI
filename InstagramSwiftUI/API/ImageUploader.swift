@@ -8,11 +8,26 @@
 import UIKit
 import Firebase
  
-struct ImageUploader {
-    static func uploadImage(image: UIImage, completion: @escaping(String) -> ()) {
-        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+enum UploadType {
+    case profile
+    case upload
+    
+    var filePath: StorageReference {
         let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        switch self {
+        case .profile:
+            return Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        case .upload:
+            return Storage.storage().reference(withPath: "/upload_images/\(filename)")
+        }
+    }
+}
+
+
+struct ImageUploader {
+    static func uploadImage(image: UIImage, uploadType: UploadType, completion: @escaping(String) -> ()) {
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+        let ref = uploadType.filePath
         
         ref.putData(imageData, metadata: nil) { _, error in
             if let error = error {
@@ -21,7 +36,6 @@ struct ImageUploader {
             
             ref.downloadURL { url, _ in
                 guard let imageURL = url?.absoluteString else { return }
-                print("DEBUG: Successefully upload image for register user")
                 completion(imageURL)
             }
         }
