@@ -5,9 +5,11 @@
 //  Created by Андрей Лапин on 19.03.2021.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct FeedCell: View {
+    let post: Post
     private let maxHeight = UIScreen.main.bounds.height / 2
     
     var body: some View {
@@ -15,18 +17,18 @@ struct FeedCell: View {
             
             // user info
             HStack {
-                Image("joker")
+                KFImage(URL(string: post.ownerImageURL))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36, height: 36)
-                    .clipShape(Circle())
+                    .clipShape(Circle() )
                 
-                Text("joker")
+                Text(post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
             }.padding(.leading)
             
             // post image
-            Image("batman")
+            KFImage(URL(string: post.imageURL))
                 .resizable()
                 .scaledToFit()
             
@@ -54,9 +56,13 @@ struct FeedCell: View {
             .foregroundColor(Color.black)
             .padding([.leading])
             
+            Text("\(post.likes) likes")
+                .font(.system(size: 14, weight: .semibold))
+                .padding([.leading])
+             
             // cpation
             HStack {
-                Text("batman").font(.system(size: 14, weight: .semibold)) + Text(" All men have limits. The learn whate they are and learn not to exced them. I ignore mine.").font(.system(size: 15))
+                Text(post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text(post.caption).font(.system(size: 15))
             }
             .foregroundColor(Color.black)
             .padding([.leading, .trailing])
@@ -72,8 +78,4 @@ struct FeedCell: View {
     }
 }
 
-struct FeedCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedCell()
-    }
-}
+
