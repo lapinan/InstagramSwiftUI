@@ -40,8 +40,9 @@ struct UploadView: View {
                         .frame(width: width, height: width)
                         .clipped()
                     
-                    TextField("Enter your caption...", text: $captionText)
-                        .padding(.top)
+                    TextArea(text: $captionText, placeholder: "Enter your captions...")
+                        .frame(height: UIScreen.main.bounds.height / 2)
+
                 }.padding(.horizontal)
                 Button(action: {
                     if let image = selectedImage {
