@@ -16,7 +16,6 @@ class SearchViewModel: ObservableObject {
     }
     
     func fetchUsers() {
-        print("DEBUG: Fetch all users")
         COLLECTION_USERS.getDocuments { snapshots, _ in
             guard let documents = snapshots?.documents else { return }
             self.users = documents.compactMap { try? $0.data(as: User.self) }

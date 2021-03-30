@@ -12,6 +12,7 @@ struct UploadView: View {
     @State private var postImage: Image? 
     @State private var captionText = ""
     @State private var showingImagePicker = false
+    @Binding var tabIndex: Int
     @ObservedObject var viewModel = UploadViewModel()
     
     private let width = UIScreen.main.bounds.width * 0.3
@@ -47,6 +48,7 @@ struct UploadView: View {
                         viewModel.uploadPost(caption: captionText, image: image) { _ in
                             captionText = ""
                             postImage = nil
+                            tabIndex = 0
                         }
                     }
                 }) {
@@ -73,8 +75,3 @@ extension UploadView {
     }
 }
 
-struct UploadView_Previews: PreviewProvider {
-    static var previews: some View {
-        UploadView()
-    }
-}
