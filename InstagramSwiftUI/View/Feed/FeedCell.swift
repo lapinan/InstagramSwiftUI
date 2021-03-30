@@ -62,7 +62,7 @@ struct FeedCell: View {
              
             // cpation
             HStack {
-                Text(post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text(post.caption).font(.system(size: 15))
+                Text(post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text(" " + post.caption).font(.system(size: 15))
             }
             .foregroundColor(Color.black)
             .padding([.leading, .trailing])
