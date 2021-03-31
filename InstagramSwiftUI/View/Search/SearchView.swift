@@ -19,10 +19,13 @@ struct SearchView: View {
             SearchBar(searchText: $searchText, isSearchText: $isSearchText)
                 .padding()
             
-            if isSearchText {
-                UserListView(searchText: $searchText, viewModel: viewModel)
-            } else {
-                PostGridView()
+            
+            ZStack {
+                if isSearchText {
+                    UserListView(searchText: $searchText, viewModel: viewModel)
+                } else {
+                    PostGridView(config: .explore)
+                }
             }
                         
         }

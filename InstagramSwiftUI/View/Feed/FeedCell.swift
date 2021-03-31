@@ -30,7 +30,10 @@ struct FeedCell: View {
             // post image
             KFImage(URL(string: post.imageURL))
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width)
+                .frame(maxHeight: UIScreen.main.bounds.height / 2)
+                .clipped()
             
             // action buttons
             HStack(spacing: 30) {

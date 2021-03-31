@@ -22,9 +22,9 @@ struct ProfileView: View {
                 ProfileHeaderView(viewModel: viewModel)
                     .padding(.top)
                 
-                PostGridView()
+                PostGridView(config: .profile(user.id ?? ""))
             }
-        }
+        } 
     }
 }
 

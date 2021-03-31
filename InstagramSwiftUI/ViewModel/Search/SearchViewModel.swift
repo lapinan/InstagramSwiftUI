@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 class SearchViewModel: ObservableObject {
-    @Published var users: [User] = []
+    @Published var users = [User]()
     
     init() {
         fetchUsers()
@@ -22,7 +22,7 @@ class SearchViewModel: ObservableObject {
             print(self.users )
         }
     }
-    
+
     func filteredUsers(_ query: String) -> [User] {
         let querylowercased = query.lowercased()
         return self.users.filter { $0.fullname.lowercased().contains(querylowercased) || $0.username.lowercased().contains(querylowercased) }
