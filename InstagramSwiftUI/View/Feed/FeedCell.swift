@@ -9,26 +9,27 @@ import Kingfisher
 import SwiftUI
 
 struct FeedCell: View {
-    let post: Post
+    @ObservedObject var viewModel: FeedCellViewModel 
     private let maxHeight = UIScreen.main.bounds.height / 2
+    
     
     var body: some View {
         VStack(alignment: .leading) {
             
             // user info
             HStack {
-                KFImage(URL(string: post.ownerImageURL))
+                KFImage(URL(string: viewModel.post.ownerImageURL))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36, height: 36)
                     .clipShape(Circle() )
                 
-                Text(post.ownerUsername)
+                Text(viewModel.post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
             }.padding(.leading)
             
             // post image
-            KFImage(URL(string: post.imageURL))
+            KFImage(URL(string: viewModel.post.imageURL))
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width)
@@ -59,13 +60,13 @@ struct FeedCell: View {
             .foregroundColor(Color.black)
             .padding([.leading])
             
-            Text("\(post.likes) likes")
+            Text("\(viewModel.post.likes) likes")
                 .font(.system(size: 14, weight: .semibold))
                 .padding([.leading])
              
             // cpation
             HStack {
-                Text(post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text(" " + post.caption).font(.system(size: 15))
+                Text(viewModel.post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text(" " + viewModel.post.caption).font(.system(size: 15))
             }
             .foregroundColor(Color.black)
             .padding([.leading, .trailing])

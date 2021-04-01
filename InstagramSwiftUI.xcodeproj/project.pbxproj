@@ -25,6 +25,7 @@
 		ADA9A3FA26063AC9000AE0D5 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3F926063AC9000AE0D5 /* ForgotPasswordView.swift */; };
 		ADA9A3FD26063CB1000AE0D5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3FC26063CB1000AE0D5 /* CustomTextField.swift */; };
 		ADA9A40026064793000AE0D5 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A3FF26064793000AE0D5 /* CustomSecureField.swift */; };
+		ADB0447A2616182D0038F940 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB044792616182D0038F940 /* FeedCellViewModel.swift */; };
 		ADB2B302260907B0001592CE /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = ADB2B301260907B0001592CE /* FirebaseFunctions */; };
 		ADB2B304260907B0001592CE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = ADB2B303260907B0001592CE /* FirebaseDatabase */; };
 		ADB2B306260907B0001592CE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = ADB2B305260907B0001592CE /* FirebaseMessaging */; };
@@ -76,6 +77,7 @@
 		ADA9A3F926063AC9000AE0D5 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		ADA9A3FC26063CB1000AE0D5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ADA9A3FF26064793000AE0D5 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		ADB044792616182D0038F940 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 		ADB2B30E26090A22001592CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADB2B31626090F0C001592CE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		ADB2B319260939EE001592CE /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				AD25EAFD2613BAA10042DC38 /* FeedViewModel.swift */,
+				ADB044792616182D0038F940 /* FeedCellViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				AD1211CF2605D78D00D5B201 /* UserStatView.swift in Sources */,
 				ADF29121260524ED00909CD6 /* ProfileView.swift in Sources */,
 				ADA9A40026064793000AE0D5 /* CustomSecureField.swift in Sources */,
+				ADB0447A2616182D0038F940 /* FeedCellViewModel.swift in Sources */,
 				AD25EAFA2613B96D0042DC38 /* Post.swift in Sources */,
 				ADBB680F260BA2A300E89191 /* SearchViewModel.swift in Sources */,
 				ADC477DF2605335E007946D3 /* SearchBar.swift in Sources */,
