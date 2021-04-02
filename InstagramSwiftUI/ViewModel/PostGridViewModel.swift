@@ -41,7 +41,7 @@ class PostGridViewModel: ObservableObject {
         COLLECTION_POSTS.whereField("ownerId", isEqualTo: uid).getDocuments { (snpashot, _) in
             guard let documents = snpashot?.documents else { return }
             self.posts = documents.compactMap { try? $0.data(as: Post.self )}
-        }
+        } 
     }
     
 }

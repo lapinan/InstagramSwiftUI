@@ -12,6 +12,7 @@ struct FeedCell: View {
     @ObservedObject var viewModel: FeedCellViewModel 
     private let maxHeight = UIScreen.main.bounds.height / 2
     
+    var didLike: Bool { return viewModel.post.didLike ?? false }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,12 +34,14 @@ struct FeedCell: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width)
-                .frame(maxHeight: UIScreen.main.bounds.height / 2)
+                .frame(maxHeight: 440)
                 .clipped()
             
             // action buttons
             HStack(spacing: 30) {
-                Button(action: { }) {
+                Button(action: {
+                    didLike ? viewModel.unLiked() : viewModel.like()
+                } ) {
                     Image(systemName: "heart")
                         .resizable()
                         .frame(width: 22, height: 22)

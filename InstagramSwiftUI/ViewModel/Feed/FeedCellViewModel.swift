@@ -15,11 +15,12 @@ class FeedCellViewModel: ObservableObject {
     }
     
     func unLiked() {
-        
+        print("DUBG: unliked")
     }
     
     func like() {
         
+            
     }
     
     func checkDidLike() {
